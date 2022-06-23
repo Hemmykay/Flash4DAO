@@ -7,6 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@ethersproject/constants": "^5.6.1",
     "@thirdweb-dev/react": "^2.3.0",
     "@thirdweb-dev/sdk": "^2.2.11",
     "@types/react": "^17.0.13",
@@ -18,5 +19,21 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "vite": "^2.3.8"
-  }
+  },
+  "description": "### **Welcome 👋** To get started with this course, clone this repo and follow these commands:",
+  "main": "vite.config.js",
+  "devDependencies": {
+    "node": "^17.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hemmykay/Flash4DAO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hemmykay/Flash4DAO/issues"
+  },
+  "homepage": "https://github.com/Hemmykay/Flash4DAO#readme"
 }
