@@ -8,7 +8,7 @@ const App = () => {
   console.log("👋 Address:", address);
 
   // Initialize our editionDrop contract
-  const editionDrop = useEditionDrop("INSERT_EDITION_DROP_ADDRESS");
+  const editionDrop = useEditionDrop("0x704e495ede1CcFCa793Ffc9c444dfFFE7585353b");
   // State variable for us to know if user has our NFT.
   const [hasClaimedNFT, setHasClaimedNFT] = useState(false);
   // isClaiming lets us easily keep a loading state while the NFT is minting.
@@ -54,7 +54,7 @@ const App = () => {
 
   // This is the case where the user hasn't connected their wallet
   // to your web app. Let them call connectWallet.
- if (!address) {
+   if (!address) {
     return (
       <div className="landing">
         <h1 class="blvck">Welcome to Flash4DAO</h1>
@@ -64,6 +64,16 @@ const App = () => {
       </div>
     );
   }
+
+  // Add this little piece!
+if (hasClaimedNFT) {
+  return (
+    <div className="member-page">
+      <h1 class="blvck">Flash4DAO Member Page</h1>
+      <p>Congratulations on being a member</p>
+    </div>
+  );
+};
 
   // Render mint nft screen.
   return (
