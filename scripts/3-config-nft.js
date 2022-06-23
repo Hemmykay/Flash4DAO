@@ -2,7 +2,7 @@ import sdk from "./1-initialize-sdk.js";
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 import { readFileSync } from "fs";
 
-const editionDrop = sdk.getEditionDrop("INSERT_EDITION_DROP_ADDRESS");
+const editionDrop = sdk.getEditionDrop("0x704e495ede1CcFCa793Ffc9c444dfFFE7585353b");
 
 (async () => {
   try {
