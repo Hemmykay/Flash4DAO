@@ -22,27 +22,27 @@ const App = () => {
   const [isClaiming, setIsClaiming] = useState(false);
 
   // Holds the amount of token each member has in state.
-const [memberTokenAmounts, setMemberTokenAmounts] = useState([]);
-// The array holding all of our members addresses.
-const [memberAddresses, setMemberAddresses] = useState([]);
+  const [memberTokenAmounts, setMemberTokenAmounts] = useState([]);
+  // The array holding all of our members addresses.
+  const [memberAddresses, setMemberAddresses] = useState([]);
 
-// A fancy function to shorten someones wallet address, no need to show the whole thing. 
-const shortenAddress = (str) => {
+  // A fancy function to shorten someones wallet address, no need to show the whole thing. 
+  const shortenAddress = (str) => {
   return str.substring(0, 6) + "..." + str.substring(str.length - 4);
-};
+  };
 
-const [proposals, setProposals] = useState([]);
-const [isVoting, setIsVoting] = useState(false);
-const [hasVoted, setHasVoted] = useState(false);
+  const [proposals, setProposals] = useState([]);
+  const [isVoting, setIsVoting] = useState(false);
+  const [hasVoted, setHasVoted] = useState(false);
 
-// Retrieve all our existing proposals from the contract.
-useEffect(() => {
-  if (!hasClaimedNFT) {
-    return;
-  }
+  // Retrieve all our existing proposals from the contract.
+  useEffect(() => {
+    if (!hasClaimedNFT) {
+      return;
+    }
 
-  // A simple call to vote.getAll() to grab the proposals.
-  const getAllProposals = async () => {
+    // A simple call to vote.getAll() to grab the proposals.
+    const getAllProposals = async () => {
     try {
       const proposals = await vote.getAll();
       setProposals(proposals);
@@ -50,9 +50,9 @@ useEffect(() => {
     } catch (error) {
       console.log("failed to get proposals", error);
     }
-  };
-  getAllProposals();
-}, [hasClaimedNFT, vote]);
+    };
+    getAllProposals();
+  }, [hasClaimedNFT, vote]);
 
 // We also need to check if the user already voted.
 useEffect(() => {
